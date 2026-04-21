@@ -6,6 +6,8 @@ import co.istad.service.MovieService;
 import co.istad.service.MovieServiceImpl;
 import co.istad.utils.TableRenderer;
 
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Scanner;
 import java.util.function.Function;
@@ -33,7 +35,7 @@ public class Main {
     // ════════════════════════════════════════════════════════════════════════
     public static void main(String[] args) {
         MovieService movieService = new MovieServiceImpl();
-
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         printBanner();
 
         while (true) {
